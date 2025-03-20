@@ -1,0 +1,16 @@
+{
+  "name": "topps-ui-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.9"
+  },
+  "scripts": {},
+  "dependencies": {
+    "axios": "^1.8.3",
+    "fs": "^0.0.1-security",
+    "import": "^0.0.6"
+  }
+}

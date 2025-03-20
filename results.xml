@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.896965">
+<testsuite name="account.spec.ts" timestamp="2025-03-20T01:20:08.063Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.572" errors="0">
+<testcase name="check account page options" classname="account.spec.ts" time="10.572">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/account-check-account-page-options-chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -25,4 +25,24 @@ export default class UserSteps {
   async assertElementExist(element: Locator) {
     await expect(element).toBeInViewport({ timeout: 10000 });
   }
+
+  async assertElementsExist(elements: Locator[]) {
+    try {
+      await Promise.all(
+        elements.map(async (element) => {
+          await expect(element).toBeInViewport({ timeout: 10000 });
+        })
+      );
+    } catch (error) {
+      throw new Error(`Element assertion failed: ${error}`);
+    }
+  }
+
+  async assertElementEqualTo(initialValue: any, value: any) {
+    expect(value).toBe(initialValue);
+  }
+
+  async assertToBeTruthy(value: any) {
+    expect(value).toBeTruthy();
+  }
 }

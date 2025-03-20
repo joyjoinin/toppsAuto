@@ -1,9 +1,44 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.896965">
-<testsuite name="account.spec.ts" timestamp="2025-03-20T01:20:08.063Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.572" errors="0">
-<testcase name="check account page options" classname="account.spec.ts" time="10.572">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="152.485856">
+<testsuite name="purchase.spec.ts" timestamp="2025-03-20T06:23:31.906Z" hostname="chromium" tests="6" failures="0" skipped="0" time="151.913" errors="0">
+<testcase name="Add to cart " classname="purchase.spec.ts" time="34.537">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/account-check-account-page-options-chromium/test-finished-1.png]]
+[[ATTACHMENT|test-results/purchase-Add-to-cart--chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Add to cart, increase/decrease item , apply code " classname="purchase.spec.ts" time="53.121">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/purchase-Add-to-cart-increase-decrease-item-apply-code--chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Add to cart , and continue to checkout" classname="purchase.spec.ts" time="19.741">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/purchase-Add-to-cart-and-continue-to-checkout-chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Add to cart , and remove item" classname="purchase.spec.ts" time="22.439">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/purchase-Add-to-cart-and-remove-item-chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Buy now " classname="purchase.spec.ts" time="7.065">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/purchase-Buy-now--chromium/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Empty cart" classname="purchase.spec.ts" time="15.01">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/purchase-Empty-cart-chromium/test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>

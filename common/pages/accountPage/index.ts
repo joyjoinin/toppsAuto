@@ -15,6 +15,11 @@ export class AccountPage {
   SPM: Locator;
   rewards: Locator;
   NS: Locator;
+  myOrdersHead: Locator;
+  checkYourPointsButton: Locator;
+  rewardsOnYourPointsButton: Locator;
+  earnPointsButton: Locator;
+  referYourFriendsButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -34,5 +39,18 @@ export class AccountPage {
     this.SPM = page.getByRole("link", { name: "Stored Payment Methods" });
     this.rewards = page.locator("#main").getByRole("link", { name: "Rewards" });
     this.NS = page.getByRole("link", { name: "Newsletter Subscriptions" });
+    this.myOrdersHead = page.getByRole("heading", { name: "My Orders" });
+    this.checkYourPointsButton = page.getByRole("button", {
+      name: "Check your points",
+    });
+    this.rewardsOnYourPointsButton = page.getByRole("button", {
+      name: "Rewards on your points",
+    });
+    this.earnPointsButton = page.getByRole("button", {
+      name: "Earn points",
+    });
+    this.referYourFriendsButton = page.getByRole("button", {
+      name: "Refer your friends",
+    });
   }
 }

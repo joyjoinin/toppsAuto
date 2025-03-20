@@ -9,6 +9,14 @@ export class CartPage {
   discount: Locator;
   apply: Locator;
   continueToCheckoutButton: Locator;
+  textCartIsEmpty: Locator;
+  textGoHome: Locator;
+  subtotalValue: Locator;
+  discountValue: Locator;
+  checkYourPointsButton: Locator;
+  rewardsOnYourPointsButton: Locator;
+  earnPointsButton: Locator;
+  referYourFriendsButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -24,6 +32,24 @@ export class CartPage {
     this.apply = page.getByRole("button", { name: "Apply" });
     this.continueToCheckoutButton = page.getByRole("button", {
       name: "Continue to checkout",
+    });
+    this.textCartIsEmpty = page.getByText("Cart is empty");
+    this.textGoHome = page.getByText("Go to the homepage to start");
+    this.subtotalValue = page
+      .getByText("Subtotal")
+      .locator("xpath=following-sibling::div");
+    this.discountValue = page
+      .getByText("Discount", { exact: true })
+      .locator("xpath=following-sibling::div");
+    this.checkYourPointsButton = page.getByRole("button", {
+      name: "Check your points",
+    });
+    this.rewardsOnYourPointsButton = page.getByRole("button", {
+      name: "Rewards on your points",
+    });
+    this.earnPointsButton = page.getByRole("button", { name: "Earn points" });
+    this.referYourFriendsButton = page.getByRole("button", {
+      name: "Refer your friends",
     });
   }
 }

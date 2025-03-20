@@ -19,7 +19,7 @@ export class HomePage {
   constructor(page: Page) {
     this.page = page;
     this.signInButton = page.getByRole("button", {
-      name: "Sign in",
+      name: "Sign In",
     });
 
     this.accountButton = page.getByRole("button", { name: "Account" });

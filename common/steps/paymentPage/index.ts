@@ -36,4 +36,15 @@ export default class PaymentSteps extends PaymentPage {
     await this.payNow();
     await this.assertPaymentSuccess();
   }
+
+  async inputCard() {
+    await this.inputCardNumber();
+    await this.inputExpirationDate();
+    await this.inputSecurityCode();
+  }
+
+  async applyDiscount(code: string) {
+    await this.discount.fill(code);
+    await this.apply.click();
+  }
 }

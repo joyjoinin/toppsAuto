@@ -2,6 +2,7 @@ import { test } from "@playwright/test";
 import UserSteps from "../common/steps";
 import {
   discountForEntireOrder,
+  discountForFreeShip,
   testCollection,
 } from "../common/params/params";
 
@@ -17,6 +18,22 @@ test("Add to cart ", async ({ page }) => {
   }
   await Page.cart.continueToCheckout();
   await Page.payment.basicPayment();
+});
+
+test("check in stock ", async ({ page }) => {
+  const Page = new UserSteps(page);
+  await Page.page.goto(testCollection);
+  await Page.collections.inStockOnly.check();
+  await Page.assertElementsExist([
+    Page.collections.addToCart,
+    Page.collections.buyNow,
+  ]);
+  await Page.collections.inStockOnly.uncheck();
+  await Page.assertElementsExist([
+    Page.collections.addToCart,
+    Page.collections.buyNow,
+    Page.collections.soldOutButton,
+  ]);
 });
 
 test("Add to cart, increase/decrease item , apply code ", async ({ page }) => {
@@ -91,11 +108,21 @@ test("Add to cart , and remove item", async ({ page }) => {
   ]);
 });
 
-test("Buy now ", async ({ page }) => {
-  const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
-  await Page.collections.buyNowItem();
-});
+// test("Buy now , add shipping free ", async ({ page }) => {
+//   const Page = new UserSteps(page);
+//   await Page.page.goto(testCollection);
+//   await Page.collections.buyNowItem();
+//   await Page.payment.inputCard();
+//   await Page.payment.saveInfo();
+//   await Page.payment.applyDiscount(discountForFreeShip);
+//   await Page.assertElementExist(
+//     page
+//       .getByRole("row", { name: "Shipping" })
+//       .getByRole("cell", { name: "FREE" })
+//   );
+//   await Page.payment.payNow();
+//   await Page.payment.assertPaymentSuccess();
+// });
 
 test("Empty cart", async ({ page }) => {
   const Page = new UserSteps(page);
@@ -106,3 +133,12 @@ test("Empty cart", async ({ page }) => {
     Page.cart.textGoHome,
   ]);
 });
+
+// test("View options", async ({ page }) => {
+//   const Page = new UserSteps(page);
+//   await Page.page.goto(testCollection);
+//   await Page.collections.viewOptions();
+//   await Page.collections.addOption();
+//   await Page.collections.clickContinueToCheckout();
+//   await Page.payment.basicPayment();
+// });

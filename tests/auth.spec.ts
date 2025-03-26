@@ -1,6 +1,6 @@
 import { test as setup } from "@playwright/test";
 
-export const authFile = ".auth/test.json";
+export const authFile = ".auth/user.json";
 
 setup("Authenticate", async ({ page }) => {
   await page.goto("/");

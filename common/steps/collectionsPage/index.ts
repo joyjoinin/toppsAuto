@@ -9,8 +9,8 @@ export default class CollectionsSteps extends CollectionsPage {
     await this.addToCart.click();
   }
 
-  async checkViewOptions() {
-    await this.viewOptions.click();
+  async viewOptions() {
+    await this.viewOptionsButton.click();
   }
 
   async clickGoToCart() {
@@ -19,5 +19,11 @@ export default class CollectionsSteps extends CollectionsPage {
 
   async clickContinueToCheckout() {
     await this.continueToCheckout.click();
+  }
+
+  async addOption() {
+    // first one default
+    await this.page.getByTestId("product-variant-item-0").click();
+    await this.addItemToCart();
   }
 }

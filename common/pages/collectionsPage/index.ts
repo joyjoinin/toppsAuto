@@ -3,19 +3,20 @@ import { type Locator, type Page } from "@playwright/test";
 export class CollectionsPage {
   page: Page;
   inStockOnly: Locator;
-  viewOptions: Locator;
+  viewOptionsButton: Locator;
   addToCart: Locator;
   buyNow: Locator;
   cartPopover: Locator;
   closePopover: Locator;
   goToCart: Locator;
   continueToCheckout: Locator;
+  soldOutButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.inStockOnly = page.getByRole("switch", { name: "In Stock Only" });
-    this.viewOptions = page.getByRole("link", { name: "View options" });
-    this.addToCart = page.getByRole("button", { name: "Add to cart" });
+    this.viewOptionsButton = page.getByRole("link", { name: "View options" });
+    this.addToCart = page.getByText("Add to cart");
     this.buyNow = page.getByRole("button", { name: "Buy now" });
     this.cartPopover = page.getByText("Cart", { exact: true });
     this.closePopover = page.getByRole("button", { name: "close cart" });
@@ -23,5 +24,6 @@ export class CollectionsPage {
     this.continueToCheckout = page.getByRole("button", {
       name: "Continue to Checkout",
     });
+    this.soldOutButton = page.getByRole("button", { name: "Sold out" });
   }
 }

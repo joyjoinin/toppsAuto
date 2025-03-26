@@ -5,17 +5,19 @@ test("check account page options", async ({ page }) => {
   const Page = new UserSteps(page);
   await Page.home.goHome();
   await Page.home.goToAccount();
-  await Page.assertElementExist(Page.account.myAccount);
-  await Page.assertElementExist(Page.account.myOrders);
-  await Page.assertElementExist(Page.account.addressBook);
-  await Page.assertElementExist(Page.account.redemptions);
-  await Page.assertElementExist(Page.account.PDS);
-  await Page.assertElementExist(Page.account.accountInfo);
-  await Page.assertElementExist(Page.account.BBL);
-  await Page.assertElementExist(Page.account.SFB);
-  await Page.assertElementExist(Page.account.privacySettings);
-  await Page.assertElementExist(Page.account.storeCredit);
-  await Page.assertElementExist(Page.account.SPM);
-  await Page.assertElementExist(Page.account.rewards);
-  await Page.assertElementExist(Page.account.NS);
+  await Page.assertElementsExist([
+    Page.account.myAccount,
+    Page.account.myOrders,
+    Page.account.addressBook,
+    Page.account.redemptions,
+    Page.account.PDS,
+    Page.account.accountInfo,
+    Page.account.BBL,
+    Page.account.SFB,
+    Page.account.privacySettings,
+    Page.account.storeCredit,
+    Page.account.SPM,
+    Page.account.rewards,
+    Page.account.NS,
+  ]);
 });

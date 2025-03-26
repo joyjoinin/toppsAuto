@@ -64,16 +64,16 @@ export default defineConfig({
     //   },
     // },
     {
-      name: "chromium",
+      name: "local-chromium",
       // teardown: "teardown",
       use: {
-        ...devices["Desktop Chrome"],
+        // ...devices["Desktop Chrome"],
         viewport: { width: 1920, height: 1280 },
         extraHTTPHeaders: {
           "x-next-authorization": process.env.Authorization || "",
           "x-next-datasource": process.env.shopify || "",
         },
-        storageState: ".auth/test.json",
+        storageState: ".auth/user.json",
         headless: true,
         launchOptions: {
           args: [

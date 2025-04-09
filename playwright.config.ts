@@ -64,10 +64,10 @@ export default defineConfig({
     //   },
     // },
     {
-      name: "local-chromium",
       // teardown: "teardown",
       use: {
-        // ...devices["Desktop Chrome"],
+        ...devices["Desktop Chrome"],
+        // channel: "chrome",
         viewport: { width: 1920, height: 1280 },
         extraHTTPHeaders: {
           "x-next-authorization": process.env.Authorization || "",

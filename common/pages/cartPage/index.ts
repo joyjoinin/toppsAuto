@@ -13,10 +13,6 @@ export class CartPage {
   textGoHome: Locator;
   subtotalValue: Locator;
   discountValue: Locator;
-  checkYourPointsButton: Locator;
-  rewardsOnYourPointsButton: Locator;
-  earnPointsButton: Locator;
-  referYourFriendsButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -41,15 +37,5 @@ export class CartPage {
     this.discountValue = page
       .getByText("Discount", { exact: true })
       .locator("xpath=following-sibling::div");
-    this.checkYourPointsButton = page.getByRole("button", {
-      name: "Check your points",
-    });
-    this.rewardsOnYourPointsButton = page.getByRole("button", {
-      name: "Rewards on your points",
-    });
-    this.earnPointsButton = page.getByRole("button", { name: "Earn points" });
-    this.referYourFriendsButton = page.getByRole("button", {
-      name: "Refer your friends",
-    });
   }
 }

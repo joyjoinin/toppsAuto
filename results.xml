@@ -1,6 +1,17 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="87550.784519">
-<testsuite name="auth.spec.ts" timestamp="2025-03-24T05:47:58.227Z" hostname="local-chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
-<testcase name="Authenticate" classname="auth.spec.ts" time="0">
+<testsuites id="" name="" tests="2" failures="0" skipped="1" errors="0" time="37.432057">
+<testsuite name="account.spec.ts" timestamp="2025-04-09T06:06:02.167Z" hostname="" tests="2" failures="0" skipped="1" time="37.033" errors="0">
+<testcase name="check account page options" classname="account.spec.ts" time="36.805">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/account-check-account-page-options/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="change user name" classname="account.spec.ts" time="0.228">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
 <skipped>
 </skipped>
 </testcase>

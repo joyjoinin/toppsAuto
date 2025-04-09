@@ -4,6 +4,7 @@ import AccountSteps from "./accountPage";
 import CollectionsSteps from "./collectionsPage";
 import CartSteps from "./cartPage";
 import PaymentSteps from "./paymentPage";
+import { accountPage } from "@/params/params";
 
 export default class UserSteps {
   page: Page;
@@ -44,5 +45,9 @@ export default class UserSteps {
 
   async assertToBeTruthy(value: any) {
     expect(value).toBeTruthy();
+  }
+
+  async redirectToAccountPage() {
+    await this.page.goto(accountPage);
   }
 }

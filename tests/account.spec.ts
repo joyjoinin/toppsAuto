@@ -5,7 +5,6 @@ test("check account page options", async ({ page }) => {
   const Page = new UserSteps(page);
   await Page.home.goHome();
   await Page.home.goToAccount();
-  // await Page.account.myAccountPage();
   await Page.assertElementsExist([
     Page.account.myAccountHead,
     Page.account.accountInformationHead,
@@ -86,7 +85,6 @@ test("check account page options", async ({ page }) => {
 test("change user name", async ({ page }) => {
   const Page = new UserSteps(page);
   await Page.redirectToAccountPage();
-  await Page.account.myAccountPage();
   await Page.account.edit();
   const firstName = await Page.account.getFirstName();
   const lastName = await Page.account.getLastName();

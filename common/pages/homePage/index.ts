@@ -29,7 +29,10 @@ export class HomePage {
       name: "What are you looking for?",
     });
     this.titleShop = page.getByRole("link", { name: "Shop", exact: true });
-    this.titleDiscover = page.getByRole("link", { name: "Discover" });
+    this.titleDiscover = page.getByRole("link", {
+      name: "Discover",
+      exact: true,
+    });
     this.titleHelp = page.getByRole("link", { name: "Help" });
     this.cartIcon = page.getByRole("link", { name: "Cart" });
     this.OptionMyAccount = page.getByRole("link", { name: "My Account" });

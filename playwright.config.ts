@@ -75,12 +75,13 @@ export default defineConfig({
         },
         storageState: ".auth/user.json",
         headless: true,
+        // headless: false,
         launchOptions: {
           args: [
-            "--disable-web-security",
+            // "--disable-web-security",
             // "--use-fake-ui-for-media-stream",
             // "--use-fake-device-for-media-stream",
-            "--no-sandbox",
+            // "--no-sandbox",
             "--start-maximized",
           ],
         },

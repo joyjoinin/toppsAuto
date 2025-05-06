@@ -47,6 +47,15 @@ export class AccountPage {
   spmPrompt: Locator;
   nsHead: Locator;
   switchSignUpButton: Locator;
+  productNameColumnheader: Locator;
+  skuColumnheader: Locator;
+  priceColumnheader: Locator;
+  qtyColumnheader: Locator;
+  subtotalColumnheader: Locator;
+  orderInformationHeading: Locator;
+  shippingAddressLabel: Locator;
+  billingAddressLabel: Locator;
+  paymentMethodLabel: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -136,5 +145,20 @@ export class AccountPage {
     this.switchSignUpButton = page.getByRole("switch", {
       name: "Sign Up to receive our",
     });
+    this.productNameColumnheader = page.getByRole("columnheader", {
+      name: "Product Name",
+    });
+    this.skuColumnheader = page.getByRole("columnheader", { name: "SKU" });
+    this.priceColumnheader = page.getByRole("columnheader", { name: "Price" });
+    this.qtyColumnheader = page.getByRole("columnheader", { name: "Qty" });
+    this.subtotalColumnheader = page.getByRole("columnheader", {
+      name: "Subtotal",
+    });
+    this.orderInformationHeading = page.getByRole("heading", {
+      name: "Order Information",
+    });
+    this.shippingAddressLabel = page.getByText("Shipping Address");
+    this.billingAddressLabel = page.getByText("Billing Address");
+    this.paymentMethodLabel = page.getByText("Payment Method");
   }
 }

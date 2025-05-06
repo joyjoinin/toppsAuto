@@ -94,3 +94,21 @@ test("change user name", async ({ page }) => {
   await Page.account.save();
   await Page.assertElementExist(page.getByText(saveName));
 });
+
+test("check order page", async ({ page }) => {
+  const Page = new UserSteps(page);
+  await Page.home.goHome();
+  await Page.redirectToMyOrdersPage();
+  await Page.account.viewFirstOrder();
+  await Page.assertElementsExist([
+    Page.account.productNameColumnheader,
+    Page.account.skuColumnheader,
+    Page.account.priceColumnheader,
+    Page.account.qtyColumnheader,
+    Page.account.subtotalColumnheader,
+    Page.account.orderInformationHeading,
+    Page.account.shippingAddressLabel,
+    Page.account.billingAddressLabel,
+    Page.account.paymentMethodLabel,
+  ]);
+});

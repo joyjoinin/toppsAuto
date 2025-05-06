@@ -108,21 +108,21 @@ test("Add to cart , and remove item", async ({ page }) => {
   ]);
 });
 
-// test("Buy now , add shipping free ", async ({ page }) => {
-//   const Page = new UserSteps(page);
-//   await Page.page.goto(testCollection);
-//   await Page.collections.buyNowItem();
-//   await Page.payment.inputCard();
-//   await Page.payment.saveInfo();
-//   await Page.payment.applyDiscount(discountForFreeShip);
-//   await Page.assertElementExist(
-//     page
-//       .getByRole("row", { name: "Shipping" })
-//       .getByRole("cell", { name: "FREE" })
-//   );
-//   await Page.payment.payNow();
-//   await Page.payment.assertPaymentSuccess();
-// });
+test("Buy now , add shipping free ", async ({ page }) => {
+  const Page = new UserSteps(page);
+  await Page.page.goto(testCollection);
+  await Page.collections.buyNowItem();
+  await Page.payment.inputCard();
+  await Page.payment.saveInfo();
+  await Page.payment.applyDiscount(discountForFreeShip);
+  await Page.assertElementExist(
+    page
+      .getByRole("row", { name: "Shipping" })
+      .getByRole("cell", { name: "FREE" })
+  );
+  await Page.payment.payNow();
+  await Page.payment.assertPaymentSuccess();
+});
 
 test("Empty cart", async ({ page }) => {
   const Page = new UserSteps(page);
@@ -134,11 +134,11 @@ test("Empty cart", async ({ page }) => {
   ]);
 });
 
-// test("View options", async ({ page }) => {
-//   const Page = new UserSteps(page);
-//   await Page.page.goto(testCollection);
-//   await Page.collections.viewOptions();
-//   await Page.collections.addOption();
-//   await Page.collections.clickContinueToCheckout();
-//   await Page.payment.basicPayment();
-// });
+test("View options", async ({ page }) => {
+  const Page = new UserSteps(page);
+  await Page.page.goto(testCollection);
+  await Page.collections.viewOptions();
+  await Page.collections.addOption();
+  await Page.collections.clickContinueToCheckout();
+  await Page.payment.basicPayment();
+});

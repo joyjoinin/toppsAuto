@@ -4,7 +4,7 @@ import AccountSteps from "./accountPage";
 import CollectionsSteps from "./collectionsPage";
 import CartSteps from "./cartPage";
 import PaymentSteps from "./paymentPage";
-import { accountPage } from "@/params/params";
+import { accountPage, ordersPage } from "@/params/params";
 
 export default class UserSteps {
   page: Page;
@@ -49,5 +49,9 @@ export default class UserSteps {
 
   async redirectToAccountPage() {
     await this.page.goto(accountPage);
+  }
+
+  async redirectToMyOrdersPage() {
+    await this.page.goto(ordersPage);
   }
 }

@@ -1,6 +1,8 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.697846">
-<testsuite name="auth.spec.ts" timestamp="2025-04-21T02:43:02.500Z" hostname="" tests="1" failures="0" skipped="0" time="18.636" errors="0">
-<testcase name="Authenticate" classname="auth.spec.ts" time="18.636">
+<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="1442.316754">
+<testsuite name="purchase.spec.ts" timestamp="2025-05-06T06:38:01.241Z" hostname="" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Buy now , add shipping free " classname="purchase.spec.ts" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>

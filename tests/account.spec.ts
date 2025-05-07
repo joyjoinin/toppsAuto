@@ -11,7 +11,7 @@ test("check account page options", async ({ page }) => {
   ]);
 
   await Page.account.myOrdersPage();
-  await Page.assertElementsExist([Page.account.myOrdersHead]);
+  await Page.assertElementsExist([Page.myOrders.myOrdersHead]);
 
   await Page.account.addressBookPage();
   await Page.assertElementsExist([
@@ -29,8 +29,8 @@ test("check account page options", async ({ page }) => {
 
   await Page.account.pdsPage();
   await Page.assertElementsExist([
-    Page.account.pdsHead,
-    Page.account.addSubmissionButton,
+    Page.pds.pdsHead,
+    Page.pds.addSubmissionButton,
   ]);
 
   await Page.account.accountInformationPage();
@@ -93,22 +93,4 @@ test("change user name", async ({ page }) => {
   await Page.account.inputLastName(firstName);
   await Page.account.save();
   await Page.assertElementExist(page.getByText(saveName));
-});
-
-test("check order page", async ({ page }) => {
-  const Page = new UserSteps(page);
-  await Page.home.goHome();
-  await Page.redirectToMyOrdersPage();
-  await Page.account.viewFirstOrder();
-  await Page.assertElementsExist([
-    Page.account.productNameColumnheader,
-    Page.account.skuColumnheader,
-    Page.account.priceColumnheader,
-    Page.account.qtyColumnheader,
-    Page.account.subtotalColumnheader,
-    Page.account.orderInformationHeading,
-    Page.account.shippingAddressLabel,
-    Page.account.billingAddressLabel,
-    Page.account.paymentMethodLabel,
-  ]);
 });

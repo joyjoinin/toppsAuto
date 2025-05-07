@@ -4,7 +4,9 @@ import AccountSteps from "./accountPage";
 import CollectionsSteps from "./collectionsPage";
 import CartSteps from "./cartPage";
 import PaymentSteps from "./paymentPage";
-import { accountPage, ordersPage } from "@/params/params";
+import { accountPage, ordersPage, pdsPage } from "@/params/params";
+import MyOrdersSteps from "./accountPage/myOrdersPage";
+import PdsSteps from "./accountPage/pdsPage";
 
 export default class UserSteps {
   page: Page;
@@ -13,6 +15,8 @@ export default class UserSteps {
   collections: CollectionsSteps;
   cart: CartSteps;
   payment: PaymentSteps;
+  myOrders: MyOrdersSteps;
+  pds: PdsSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -21,6 +25,8 @@ export default class UserSteps {
     this.collections = new CollectionsSteps(page);
     this.cart = new CartSteps(page);
     this.payment = new PaymentSteps(page);
+    this.myOrders = new MyOrdersSteps(page);
+    this.pds = new PdsSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -53,5 +59,9 @@ export default class UserSteps {
 
   async redirectToMyOrdersPage() {
     await this.page.goto(ordersPage);
+  }
+
+  async redirectToPDSPage() {
+    await this.page.goto(pdsPage);
   }
 }

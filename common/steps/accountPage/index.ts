@@ -79,8 +79,4 @@ export default class AccountSteps extends AccountPage {
   async save() {
     await this.saveButton.click();
   }
-
-  async viewFirstOrder() {
-    await this.page.getByRole("row").getByText("View Order").first().click();
-  }
 }

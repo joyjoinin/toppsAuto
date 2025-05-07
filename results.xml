@@ -1,8 +1,11 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="1442.316754">
-<testsuite name="purchase.spec.ts" timestamp="2025-05-06T06:38:01.241Z" hostname="" tests="1" failures="0" skipped="1" time="0" errors="0">
-<testcase name="Buy now , add shipping free " classname="purchase.spec.ts" time="0">
-<skipped>
-</skipped>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="16.39183900000155">
+<testsuite name="pds.spec.ts" timestamp="2025-05-07T06:58:25.954Z" hostname="" tests="1" failures="0" skipped="0" time="15.834" errors="0">
+<testcase name="check order page" classname="pds.spec.ts" time="15.834">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/pds-check-order-page/test-finished-1.png]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

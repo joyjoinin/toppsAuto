@@ -18,7 +18,7 @@ test("check My Orders option ", async ({ page }) => {
   const Page = new UserSteps(page);
   await Page.home.goHome();
   await Page.home.goToMyOrders();
-  await Page.assertElementExist(Page.account.myOrdersHead);
+  await Page.assertElementExist(Page.myOrders.myOrdersHead);
 });
 
 test("check Rewards option ", async ({ page }) => {

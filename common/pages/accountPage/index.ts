@@ -15,7 +15,6 @@ export class AccountPage {
   SPM: Locator;
   rewards: Locator;
   NS: Locator;
-  myOrdersHead: Locator;
   checkYourPointsButton: Locator;
   rewardsOnYourPointsButton: Locator;
   earnPointsButton: Locator;
@@ -33,8 +32,6 @@ export class AccountPage {
   myOpenRedemptionsTab: Locator;
   myShippedRedemptions: Locator;
   submitButton: Locator;
-  pdsHead: Locator;
-  addSubmissionButton: Locator;
   editAccountInfoHead: Locator;
   bblHead: Locator;
   enterMoreCodesButton: Locator;
@@ -79,7 +76,6 @@ export class AccountPage {
     this.SPM = page.getByRole("link", { name: "Stored Payment Methods" });
     this.rewards = page.locator("#main").getByRole("link", { name: "Rewards" });
     this.NS = page.getByRole("link", { name: "Newsletter Subscriptions" });
-    this.myOrdersHead = page.getByRole("heading", { name: "My Orders" });
     this.checkYourPointsButton = page.getByRole("button", {
       name: "Check your points",
     });
@@ -111,12 +107,6 @@ export class AccountPage {
       name: "My Shipped Redemptions",
     });
     this.submitButton = page.getByRole("button", { name: "Submit" });
-    this.pdsHead = page.getByRole("heading", {
-      name: "Product Defect Submission",
-    });
-    this.addSubmissionButton = page.getByRole("link", {
-      name: "Add Submission",
-    });
     this.editAccountInfoHead = page.getByRole("heading", {
       name: "Edit Account Information",
     });

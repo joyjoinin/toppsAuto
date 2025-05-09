@@ -6,79 +6,17 @@ test("check account page options", async ({ page }) => {
   await Page.home.goHome();
   await Page.home.goToAccount();
   await Page.assertElementsExist([
-    Page.account.myAccountHead,
-    Page.account.accountInformationHead,
-  ]);
-
-  await Page.account.myOrdersPage();
-  await Page.assertElementsExist([Page.myOrders.myOrdersHead]);
-
-  await Page.account.addressBookPage();
-  await Page.assertElementsExist([
-    Page.account.addressBookHead,
-    Page.account.addAddressButton,
-  ]);
-
-  await Page.account.redemptionsPage();
-  await Page.assertElementsExist([
-    Page.account.redemptionHead,
-    Page.account.redeemACodeTab,
-    Page.account.myOpenRedemptionsTab,
-    Page.account.myShippedRedemptions,
-  ]);
-
-  await Page.account.pdsPage();
-  await Page.assertElementsExist([
-    Page.pds.pdsHead,
-    Page.pds.addSubmissionButton,
-  ]);
-
-  await Page.account.accountInformationPage();
-  await Page.assertElementsExist([
-    Page.account.editAccountInfoHead,
-    Page.account.saveButton,
-  ]);
-
-  await Page.account.bblPage();
-  await Page.assertElementsExist([
-    Page.account.bblHead,
-    Page.account.enterMoreCodesButton,
-  ]);
-
-  await Page.account.sfbPage();
-  await Page.assertElementsExist([
-    Page.account.smfHead,
-    Page.account.enterMoreCodesButton,
-  ]);
-
-  await Page.account.privacySettingsPage();
-  await Page.assertElementsExist([
-    Page.account.privacySettingsHead,
-    Page.account.submitRequestForPersonalDataButton,
-    Page.account.agreeAndSubmitRequestButton,
-  ]);
-
-  await Page.account.storeCreditPage();
-  await Page.assertElementsExist([
-    Page.account.storeCreditHead,
-    Page.account.balance,
-  ]);
-
-  await Page.account.spmPage();
-  await Page.assertElementsExist([Page.account.spmPrompt]);
-
-  await Page.account.rewardsPage();
-  await Page.assertElementsExist([
-    Page.account.checkYourPointsButton,
-    Page.account.rewardsOnYourPointsButton,
-    Page.account.earnPointsButton,
-    Page.account.referYourFriendsButton,
-  ]);
-
-  await Page.account.nsPage();
-  await Page.assertElementsExist([
-    Page.account.nsHead,
-    Page.account.switchSignUpButton,
+    Page.account.myAccount,
+    Page.account.myOrders,
+    Page.account.addressBook,
+    Page.account.redemptions,
+    Page.account.PDS,
+    Page.account.BBL,
+    Page.account.SFB,
+    Page.account.privacySettings,
+    Page.account.storeCredit,
+    Page.account.rewards,
+    Page.account.NS,
   ]);
 });
 

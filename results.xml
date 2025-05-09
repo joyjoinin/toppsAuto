@@ -1,9 +1,9 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="17.97675">
-<testsuite name="addressBook.spec.ts" timestamp="2025-05-09T02:09:59.008Z" hostname="" tests="1" failures="0" skipped="0" time="17.217" errors="0">
-<testcase name="check addressBook page" classname="addressBook.spec.ts" time="17.217">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.783185000002383">
+<testsuite name="redemptions.spec.ts" timestamp="2025-05-09T06:12:28.193Z" hostname="" tests="1" failures="0" skipped="0" time="21.772" errors="0">
+<testcase name="check redemptions page" classname="redemptions.spec.ts" time="21.772">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/addressBook-check-addressBook-page/test-finished-1.png]]
+[[ATTACHMENT|test-results/redemptions-check-redemptions-page/test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>

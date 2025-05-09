@@ -27,11 +27,6 @@ export class AccountPage {
   accountInformationHead: Locator;
   addressBookHead: Locator;
   addAddressButton: Locator;
-  redemptionHead: Locator;
-  redeemACodeTab: Locator;
-  myOpenRedemptionsTab: Locator;
-  myShippedRedemptions: Locator;
-  submitButton: Locator;
   editAccountInfoHead: Locator;
   bblHead: Locator;
   enterMoreCodesButton: Locator;
@@ -98,15 +93,7 @@ export class AccountPage {
     });
     this.addressBookHead = page.getByRole("heading", { name: "Address Book" });
     this.addAddressButton = page.getByRole("link", { name: "Add address" });
-    this.redemptionHead = page.getByRole("heading", { name: "Redemptions" });
-    this.redeemACodeTab = page.getByRole("tab", { name: "Redeem a Code" });
-    this.myOpenRedemptionsTab = page.getByRole("tab", {
-      name: "My Open Redemptions",
-    });
-    this.myShippedRedemptions = page.getByRole("tab", {
-      name: "My Shipped Redemptions",
-    });
-    this.submitButton = page.getByRole("button", { name: "Submit" });
+
     this.editAccountInfoHead = page.getByRole("heading", {
       name: "Edit Account Information",
     });

@@ -1,6 +1,6 @@
-import { addressBookPage } from "@/pages/accountPage/addressBookPage";
+import { AddressBookPage } from "@/pages/accountPage/addressBookPage";
 
-export default class AddressBookSteps extends addressBookPage {
+export default class AddressBookSteps extends AddressBookPage {
   async addAddress() {
     await this.addAddressButton.click();
   }

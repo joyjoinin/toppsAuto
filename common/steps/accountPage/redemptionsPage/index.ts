@@ -1,6 +1,6 @@
-import { redemptionsPage } from "@/pages/accountPage/redemptionsPage";
+import { RedemptionsPage } from "@/pages/accountPage/redemptionsPage";
 
-export default class RedemptionsSteps extends redemptionsPage {
+export default class RedemptionsSteps extends RedemptionsPage {
   async redeemACode() {
     await this.redeemACodeTab.click();
   }

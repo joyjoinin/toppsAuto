@@ -1,6 +1,6 @@
 import { type Locator, type Page } from "@playwright/test";
 
-export class redemptionsPage {
+export class RedemptionsPage {
   page: Page;
   defaultAddress: Locator;
   addAddressButton: Locator;

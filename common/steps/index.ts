@@ -7,6 +7,7 @@ import PaymentSteps from "./paymentPage";
 import {
   accountPage,
   addressPage,
+  bblPage,
   ordersPage,
   pdsPage,
   redemptionsPage,
@@ -15,6 +16,7 @@ import MyOrdersSteps from "./accountPage/myOrdersPage";
 import PdsSteps from "./accountPage/pdsPage";
 import AddressBookSteps from "./accountPage/addressBookPage";
 import RedemptionsSteps from "./accountPage/redemptionsPage";
+import BblSteps from "./accountPage/bblPage";
 
 export default class UserSteps {
   page: Page;
@@ -27,6 +29,7 @@ export default class UserSteps {
   pds: PdsSteps;
   addressBook: AddressBookSteps;
   redemptions: RedemptionsSteps;
+  bbl: BblSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -39,6 +42,7 @@ export default class UserSteps {
     this.pds = new PdsSteps(page);
     this.addressBook = new AddressBookSteps(page);
     this.redemptions = new RedemptionsSteps(page);
+    this.bbl = new BblSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -83,5 +87,8 @@ export default class UserSteps {
 
   async redirectToRedemptionsPage() {
     await this.page.goto(redemptionsPage);
+  }
+  async redirectToBblPage() {
+    await this.page.goto(bblPage);
   }
 }

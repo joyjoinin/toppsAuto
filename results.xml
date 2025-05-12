@@ -1,11 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.783185000002383">
-<testsuite name="redemptions.spec.ts" timestamp="2025-05-09T06:12:28.193Z" hostname="" tests="1" failures="0" skipped="0" time="21.772" errors="0">
-<testcase name="check redemptions page" classname="redemptions.spec.ts" time="21.772">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results/redemptions-check-redemptions-page/test-finished-1.png]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="21.962108000000008">
+<testsuite name="auth.spec.ts" timestamp="2025-05-12T05:39:43.474Z" hostname="" tests="1" failures="0" skipped="0" time="20.57" errors="0">
+<testcase name="Authenticate" classname="auth.spec.ts" time="20.57">
 </testcase>
 </testsuite>
 </testsuites>

@@ -1,6 +1,6 @@
 import { type Locator, type Page } from "@playwright/test";
 
-export class addressBookPage {
+export class AddressBookPage {
   page: Page;
   defaultAddress: Locator;
   addAddressButton: Locator;

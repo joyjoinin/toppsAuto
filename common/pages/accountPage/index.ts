@@ -28,8 +28,7 @@ export class AccountPage {
   addressBookHead: Locator;
   addAddressButton: Locator;
   editAccountInfoHead: Locator;
-  bblHead: Locator;
-  enterMoreCodesButton: Locator;
+
   smfHead: Locator;
   privacySettingsHead: Locator;
   submitRequestForPersonalDataButton: Locator;
@@ -97,10 +96,7 @@ export class AccountPage {
     this.editAccountInfoHead = page.getByRole("heading", {
       name: "Edit Account Information",
     });
-    this.bblHead = page.getByRole("heading", { name: "Become A Big Leaguer" });
-    this.enterMoreCodesButton = page.getByRole("link", {
-      name: "Enter More Codes",
-    });
+
     this.smfHead = page.getByRole("heading", {
       name: "Social Media Follow Back",
     });

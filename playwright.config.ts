@@ -56,8 +56,8 @@ export default defineConfig({
           "x-next-datasource": process.env.shopify || "",
         },
         storageState: ".auth/user.json",
-        headless: true,
-        // headless: false,
+        // headless: true,
+        headless: false,
         launchOptions: {
           args: [
             // "--disable-web-security",

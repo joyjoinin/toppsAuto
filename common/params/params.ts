@@ -4,15 +4,34 @@ dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 export const authFile = ".auth/user.json";
 
-export const testCollection =
-  process.env.baseURL + "/collections/joy-automation";
-export const accountPage = process.env.baseURL + "/customer/account";
-export const ordersPage = process.env.baseURL + "/customer/account/orders";
-export const pdsPage = process.env.baseURL + "/customer/serviceclaim/listing";
-export const addressPage = process.env.baseURL + "/customer/address";
-export const redemptionsPage = process.env.baseURL + "/customer/redemptions";
-export const bblPage = process.env.baseURL + "/customer/sweepstakes/listing";
-export const sfbPage =
-  process.env.baseURL + "/customer/bigleaguebaseball/listing";
-export const discountForEntireOrder = "JoyautoDiscount";
-export const discountForFreeShip = "JoyAUtofreeShip";
+const BASE_URL = process.env.baseURL || "";
+
+export const TEST_COLLECTION = `${BASE_URL}/collections/joy-automation`;
+
+export const CustomerPaths = {
+  account: "/customer/account",
+  orders: "/customer/account/orders",
+  pds: "/customer/serviceclaim/listing",
+  address: "/customer/address",
+  redemptions: "/customer/redemptions",
+  bbl: "/customer/sweepstakes/listing",
+  sfb: "/customer/bigleaguebaseball/listing",
+  settings: "/customer/account/settings",
+};
+
+export const PageUrls = {
+  testCollection: TEST_COLLECTION,
+  account: `${BASE_URL}${CustomerPaths.account}`,
+  orders: `${BASE_URL}${CustomerPaths.orders}`,
+  pds: `${BASE_URL}${CustomerPaths.pds}`,
+  address: `${BASE_URL}${CustomerPaths.address}`,
+  redemptions: `${BASE_URL}${CustomerPaths.redemptions}`,
+  bbl: `${BASE_URL}${CustomerPaths.bbl}`,
+  sfb: `${BASE_URL}${CustomerPaths.sfb}`,
+  privateSettings: `${BASE_URL}${CustomerPaths.settings}`,
+} as const;
+
+export const Discounts = {
+  discountForEntireOrder: "JoyautoDiscount",
+  discountForFreeShip: "JoyAUtofreeShip",
+};

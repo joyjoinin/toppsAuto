@@ -1,14 +1,10 @@
 import { test } from "@playwright/test";
 import UserSteps from "../common/steps";
-import {
-  discountForEntireOrder,
-  discountForFreeShip,
-  testCollection,
-} from "../common/params/params";
+import { Discounts, TEST_COLLECTION } from "../common/params/params";
 
 test("Add to cart ", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.addItemToCart();
   try {
     await Page.collections.clickGoToCart();
@@ -22,7 +18,7 @@ test("Add to cart ", async ({ page }) => {
 
 test("check in stock ", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.inStockOnly.check();
   await Page.assertElementsExist([
     Page.collections.addToCart,
@@ -38,7 +34,7 @@ test("check in stock ", async ({ page }) => {
 
 test("Add to cart, increase/decrease item , apply code ", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.addItemToCart();
   try {
     await Page.collections.clickGoToCart();
@@ -62,12 +58,14 @@ test("Add to cart, increase/decrease item , apply code ", async ({ page }) => {
     initialQuantity,
     await Page.cart.getQuantity()
   );
-  await Page.cart.enterDiscount(discountForEntireOrder);
+  await Page.cart.enterDiscount(Discounts.discountForEntireOrder);
   await Page.cart.applyCode();
   await Page.assertElementExist(
     Page.page
       .locator("div")
-      .filter({ hasText: new RegExp("^" + discountForEntireOrder + "$") })
+      .filter({
+        hasText: new RegExp("^" + Discounts.discountForEntireOrder + "$"),
+      })
       .locator("svg")
       .first()
   );
@@ -81,7 +79,7 @@ test("Add to cart, increase/decrease item , apply code ", async ({ page }) => {
 
 test("Add to cart , and continue to checkout", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.addItemToCart();
   try {
     await Page.collections.clickContinueToCheckout();
@@ -93,7 +91,7 @@ test("Add to cart , and continue to checkout", async ({ page }) => {
 
 test("Add to cart , and remove item", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.addItemToCart();
   try {
     await Page.collections.clickGoToCart();
@@ -110,11 +108,11 @@ test("Add to cart , and remove item", async ({ page }) => {
 
 test("Buy now , add shipping free ", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.buyNowItem();
   await Page.payment.inputCard();
   await Page.payment.saveInfo();
-  await Page.payment.applyDiscount(discountForFreeShip);
+  await Page.payment.applyDiscount(Discounts.discountForFreeShip);
   await Page.assertElementExist(
     page
       .getByRole("row", { name: "Shipping" })
@@ -136,7 +134,7 @@ test("Empty cart", async ({ page }) => {
 
 test("View options", async ({ page }) => {
   const Page = new UserSteps(page);
-  await Page.page.goto(testCollection);
+  await Page.page.goto(TEST_COLLECTION);
   await Page.collections.viewOptions();
   await Page.collections.addOption();
   await Page.collections.clickContinueToCheckout();

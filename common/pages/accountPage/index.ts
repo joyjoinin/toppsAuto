@@ -29,9 +29,6 @@ export class AccountPage {
   addAddressButton: Locator;
   editAccountInfoHead: Locator;
 
-  privacySettingsHead: Locator;
-  submitRequestForPersonalDataButton: Locator;
-  agreeAndSubmitRequestButton: Locator;
   storeCreditHead: Locator;
   balance: Locator;
   spmPrompt: Locator;
@@ -96,15 +93,6 @@ export class AccountPage {
       name: "Edit Account Information",
     });
 
-    this.privacySettingsHead = page.getByRole("heading", {
-      name: "Privacy Settings",
-    });
-    this.submitRequestForPersonalDataButton = page.getByRole("link", {
-      name: "Submit request for personal",
-    });
-    this.agreeAndSubmitRequestButton = page.getByRole("link", {
-      name: "Agree and Submit Request",
-    });
     this.storeCreditHead = page.getByRole("heading", { name: "Store Credit" });
     this.balance = page.getByRole("heading", { name: "Balance$" });
     this.spmPrompt = page.getByText("As part of our continuing");

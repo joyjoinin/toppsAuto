@@ -4,21 +4,14 @@ import AccountSteps from "./accountPage";
 import CollectionsSteps from "./collectionsPage";
 import CartSteps from "./cartPage";
 import PaymentSteps from "./paymentPage";
-import {
-  accountPage,
-  addressPage,
-  bblPage,
-  ordersPage,
-  pdsPage,
-  redemptionsPage,
-  sfbPage,
-} from "@/params/params";
 import MyOrdersSteps from "./accountPage/myOrdersPage";
 import PdsSteps from "./accountPage/pdsPage";
 import AddressBookSteps from "./accountPage/addressBookPage";
 import RedemptionsSteps from "./accountPage/redemptionsPage";
 import BblSteps from "./accountPage/bblPage";
 import FsbSteps from "./accountPage/sfbPage";
+import PrivacySettingsSteps from "./accountPage/privacySettingsPage";
+import { PageUrls } from "@/params/params";
 
 export default class UserSteps {
   page: Page;
@@ -33,6 +26,7 @@ export default class UserSteps {
   redemptions: RedemptionsSteps;
   bbl: BblSteps;
   fsb: FsbSteps;
+  privateSettings: PrivacySettingsSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -47,6 +41,7 @@ export default class UserSteps {
     this.redemptions = new RedemptionsSteps(page);
     this.bbl = new BblSteps(page);
     this.fsb = new FsbSteps(page);
+    this.privateSettings = new PrivacySettingsSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -74,28 +69,32 @@ export default class UserSteps {
   }
 
   async redirectToAccountPage() {
-    await this.page.goto(accountPage);
+    await this.page.goto(PageUrls.account);
   }
 
   async redirectToMyOrdersPage() {
-    await this.page.goto(ordersPage);
+    await this.page.goto(PageUrls.orders);
   }
 
   async redirectToPDSPage() {
-    await this.page.goto(pdsPage);
+    await this.page.goto(PageUrls.pds);
   }
 
   async redirectToAddressPage() {
-    await this.page.goto(addressPage);
+    await this.page.goto(PageUrls.address);
   }
 
   async redirectToRedemptionsPage() {
-    await this.page.goto(redemptionsPage);
+    await this.page.goto(PageUrls.redemptions);
   }
   async redirectToBblPage() {
-    await this.page.goto(bblPage);
+    await this.page.goto(PageUrls.bbl);
   }
   async redirectToSfbPage() {
-    await this.page.goto(sfbPage);
+    await this.page.goto(PageUrls.sfb);
+  }
+
+  async redirectToPrivacySettingsPage() {
+    await this.page.goto(PageUrls.privateSettings);
   }
 }

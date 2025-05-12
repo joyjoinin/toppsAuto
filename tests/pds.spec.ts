@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import UserSteps from "../common/steps";
 
-test("check pds page", async ({ page }) => {
+test("check product defect submission page", async ({ page }) => {
   const Page = new UserSteps(page);
   await Page.home.goHome();
   await Page.redirectToPDSPage();

@@ -29,7 +29,6 @@ export class AccountPage {
   addAddressButton: Locator;
   editAccountInfoHead: Locator;
 
-  smfHead: Locator;
   privacySettingsHead: Locator;
   submitRequestForPersonalDataButton: Locator;
   agreeAndSubmitRequestButton: Locator;
@@ -97,9 +96,6 @@ export class AccountPage {
       name: "Edit Account Information",
     });
 
-    this.smfHead = page.getByRole("heading", {
-      name: "Social Media Follow Back",
-    });
     this.privacySettingsHead = page.getByRole("heading", {
       name: "Privacy Settings",
     });

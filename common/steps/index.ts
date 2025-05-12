@@ -11,12 +11,14 @@ import {
   ordersPage,
   pdsPage,
   redemptionsPage,
+  sfbPage,
 } from "@/params/params";
 import MyOrdersSteps from "./accountPage/myOrdersPage";
 import PdsSteps from "./accountPage/pdsPage";
 import AddressBookSteps from "./accountPage/addressBookPage";
 import RedemptionsSteps from "./accountPage/redemptionsPage";
 import BblSteps from "./accountPage/bblPage";
+import FsbSteps from "./accountPage/sfbPage";
 
 export default class UserSteps {
   page: Page;
@@ -30,6 +32,7 @@ export default class UserSteps {
   addressBook: AddressBookSteps;
   redemptions: RedemptionsSteps;
   bbl: BblSteps;
+  fsb: FsbSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -43,6 +46,7 @@ export default class UserSteps {
     this.addressBook = new AddressBookSteps(page);
     this.redemptions = new RedemptionsSteps(page);
     this.bbl = new BblSteps(page);
+    this.fsb = new FsbSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -90,5 +94,8 @@ export default class UserSteps {
   }
   async redirectToBblPage() {
     await this.page.goto(bblPage);
+  }
+  async redirectToSfbPage() {
+    await this.page.goto(sfbPage);
   }
 }

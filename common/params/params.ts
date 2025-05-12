@@ -12,5 +12,7 @@ export const pdsPage = process.env.baseURL + "/customer/serviceclaim/listing";
 export const addressPage = process.env.baseURL + "/customer/address";
 export const redemptionsPage = process.env.baseURL + "/customer/redemptions";
 export const bblPage = process.env.baseURL + "/customer/sweepstakes/listing";
+export const sfbPage =
+  process.env.baseURL + "/customer/bigleaguebaseball/listing";
 export const discountForEntireOrder = "JoyautoDiscount";
 export const discountForFreeShip = "JoyAUtofreeShip";

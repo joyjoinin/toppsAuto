@@ -1,0 +1,32 @@
+version: 2.1
+
+parameters:
+  run_smoke_test:
+    type: boolean
+    default: false
+
+jobs:
+  run-test:
+    docker:
+      - image: mcr.microsoft.com/playwright
+    # Steps to the job
+    steps:
+      - checkout
+      - run: npm i -D @playwright/test
+      - run: npx playwright install
+      - run: npx playwright install chrome
+      - run:
+          name: Run test
+          command: PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml npx playwright test --reporter=junit --project=chromium
+      - run: cat results.xml
+      # - store_test_results:
+      #     path: results.xml
+      # - store_artifacts:
+      #     path: test-results
+
+# Invoke jobs via workflows
+workflows:
+  integration-test:
+    when: << pipeline.parameters.run_smoke_test >>
+    jobs:
+      - run-test

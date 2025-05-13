@@ -26,10 +26,10 @@ test("check Rewards option ", async ({ page }) => {
   await Page.home.goHome();
   await Page.home.goToRewards();
   await Page.assertElementsExist([
-    Page.account.checkYourPointsButton,
-    Page.account.earnPointsButton,
-    Page.account.rewardsOnYourPointsButton,
-    Page.account.referYourFriendsButton,
+    Page.rewards.checkYourPointsButton,
+    Page.rewards.earnPointsButton,
+    Page.rewards.rewardsOnYourPointsButton,
+    Page.rewards.referYourFriendsButton,
   ]);
 });
 

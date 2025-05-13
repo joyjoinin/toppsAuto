@@ -15,10 +15,7 @@ export class AccountPage {
   SPM: Locator;
   rewards: Locator;
   NS: Locator;
-  checkYourPointsButton: Locator;
-  rewardsOnYourPointsButton: Locator;
-  earnPointsButton: Locator;
-  referYourFriendsButton: Locator;
+
   editButton: Locator;
   firstName: Locator;
   lastName: Locator;
@@ -64,18 +61,7 @@ export class AccountPage {
     this.SPM = page.getByRole("link", { name: "Stored Payment Methods" });
     this.rewards = page.locator("#main").getByRole("link", { name: "Rewards" });
     this.NS = page.getByRole("link", { name: "Newsletter Subscriptions" });
-    this.checkYourPointsButton = page.getByRole("button", {
-      name: "Check your points",
-    });
-    this.rewardsOnYourPointsButton = page.getByRole("button", {
-      name: "Rewards on your points",
-    });
-    this.earnPointsButton = page.getByRole("button", {
-      name: "Earn points",
-    });
-    this.referYourFriendsButton = page.getByRole("button", {
-      name: "Refer your friends",
-    });
+
     this.editButton = page.getByRole("button", { name: "Edit" });
     this.firstName = page.getByPlaceholder("First name");
     this.lastName = page.getByPlaceholder("Last name");

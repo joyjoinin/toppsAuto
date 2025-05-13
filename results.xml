@@ -1,9 +1,9 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="14.494037999987603">
-<testsuite name="storeCredit.spec.ts" timestamp="2025-05-13T06:28:13.508Z" hostname="" tests="1" failures="0" skipped="0" time="13.453" errors="0">
-<testcase name="check store credit page" classname="storeCredit.spec.ts" time="13.453">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="12.772091000005602">
+<testsuite name="rewards.spec.ts" timestamp="2025-05-13T06:44:31.842Z" hostname="" tests="1" failures="0" skipped="0" time="11.818" errors="0">
+<testcase name="check Rewards option " classname="rewards.spec.ts" time="11.818">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/storeCredit-check-store-credit-page/test-finished-1.png]]
+[[ATTACHMENT|test-results/rewards-check-Rewards-option-/test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>

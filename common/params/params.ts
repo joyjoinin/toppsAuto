@@ -17,6 +17,7 @@ export const CustomerPaths = {
   bbl: "/customer/sweepstakes/listing",
   sfb: "/customer/bigleaguebaseball/listing",
   settings: "/customer/account/settings",
+  credit: "/customer/account/store-credit",
 };
 
 export const PageUrls = {
@@ -29,6 +30,7 @@ export const PageUrls = {
   bbl: `${BASE_URL}${CustomerPaths.bbl}`,
   sfb: `${BASE_URL}${CustomerPaths.sfb}`,
   privateSettings: `${BASE_URL}${CustomerPaths.settings}`,
+  storeCredit: `${BASE_URL}${CustomerPaths.credit}`,
 } as const;
 
 export const Discounts = {

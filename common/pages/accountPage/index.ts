@@ -29,8 +29,6 @@ export class AccountPage {
   addAddressButton: Locator;
   editAccountInfoHead: Locator;
 
-  storeCreditHead: Locator;
-  balance: Locator;
   spmPrompt: Locator;
   nsHead: Locator;
   switchSignUpButton: Locator;
@@ -93,8 +91,6 @@ export class AccountPage {
       name: "Edit Account Information",
     });
 
-    this.storeCreditHead = page.getByRole("heading", { name: "Store Credit" });
-    this.balance = page.getByRole("heading", { name: "Balance$" });
     this.spmPrompt = page.getByText("As part of our continuing");
     this.nsHead = page.getByRole("heading", {
       name: "Newsletter Subscription",

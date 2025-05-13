@@ -12,6 +12,7 @@ import BblSteps from "./accountPage/bblPage";
 import FsbSteps from "./accountPage/sfbPage";
 import PrivacySettingsSteps from "./accountPage/privacySettingsPage";
 import { PageUrls } from "@/params/params";
+import StoreCreditSteps from "./accountPage/storeCreditPage";
 
 export default class UserSteps {
   page: Page;
@@ -27,6 +28,7 @@ export default class UserSteps {
   bbl: BblSteps;
   fsb: FsbSteps;
   privateSettings: PrivacySettingsSteps;
+  storeCredit: StoreCreditSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -42,6 +44,7 @@ export default class UserSteps {
     this.bbl = new BblSteps(page);
     this.fsb = new FsbSteps(page);
     this.privateSettings = new PrivacySettingsSteps(page);
+    this.storeCredit = new StoreCreditSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -96,5 +99,9 @@ export default class UserSteps {
 
   async redirectToPrivacySettingsPage() {
     await this.page.goto(PageUrls.privateSettings);
+  }
+
+  async redirectToStoreCreditPage() {
+    await this.page.goto(PageUrls.storeCredit);
   }
 }

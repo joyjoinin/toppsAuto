@@ -1,3 +1,4 @@
+import { NewsletterSubscriptionsPage } from "@/pages/accountPage/newsletterSubscriptionsPage";
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config({ path: path.resolve(__dirname, ".env") });
@@ -19,6 +20,7 @@ export const CustomerPaths = {
   settings: "/customer/account/settings",
   credit: "/customer/account/store-credit",
   rewards: "/customer/loyalty/program",
+  newsletterSubscription: "/customer/account/newsletter",
 };
 
 export const PageUrls = {
@@ -33,6 +35,7 @@ export const PageUrls = {
   privateSettings: `${BASE_URL}${CustomerPaths.settings}`,
   storeCredit: `${BASE_URL}${CustomerPaths.credit}`,
   rewards: `${BASE_URL}${CustomerPaths.rewards}`,
+  newsletterSubscription: `${BASE_URL}${CustomerPaths.newsletterSubscription}`,
 } as const;
 
 export const Discounts = {

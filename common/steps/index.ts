@@ -14,6 +14,7 @@ import PrivacySettingsSteps from "./accountPage/privacySettingsPage";
 import { PageUrls } from "@/params/params";
 import StoreCreditSteps from "./accountPage/storeCreditPage";
 import RewardsSteps from "./accountPage/rewardsPage";
+import NewsletterSubscriptionsSteps from "./accountPage/newsletterSubscriptionsPage";
 
 export default class UserSteps {
   page: Page;
@@ -31,6 +32,7 @@ export default class UserSteps {
   privateSettings: PrivacySettingsSteps;
   storeCredit: StoreCreditSteps;
   rewards: RewardsSteps;
+  newslettersSubscriptions: NewsletterSubscriptionsSteps;
 
   constructor(page: Page) {
     this.page = page;
@@ -48,6 +50,7 @@ export default class UserSteps {
     this.privateSettings = new PrivacySettingsSteps(page);
     this.storeCredit = new StoreCreditSteps(page);
     this.rewards = new RewardsSteps(page);
+    this.newslettersSubscriptions = new NewsletterSubscriptionsSteps(page);
   }
 
   async assertElementExist(element: Locator) {
@@ -110,5 +113,9 @@ export default class UserSteps {
 
   async redirectToRewardsPage() {
     await this.page.goto(PageUrls.rewards);
+  }
+
+  async redirectToNewslettersSubscriptionsPage() {
+    await this.page.goto(PageUrls.newsletterSubscription);
   }
 }

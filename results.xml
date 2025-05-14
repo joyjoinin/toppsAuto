@@ -1,9 +1,9 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="12.772091000005602">
-<testsuite name="rewards.spec.ts" timestamp="2025-05-13T06:44:31.842Z" hostname="" tests="1" failures="0" skipped="0" time="11.818" errors="0">
-<testcase name="check Rewards option " classname="rewards.spec.ts" time="11.818">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="24.40260300001502">
+<testsuite name="newsletterSubscriptions.spec.ts" timestamp="2025-05-14T01:32:54.241Z" hostname="" tests="1" failures="0" skipped="0" time="22.87" errors="0">
+<testcase name="check newsletter subscriptions page" classname="newsletterSubscriptions.spec.ts" time="22.87">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/rewards-check-Rewards-option-/test-finished-1.png]]
+[[ATTACHMENT|test-results/newsletterSubscriptions-check-newsletter-subscriptions-page/test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>

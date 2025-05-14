@@ -27,8 +27,7 @@ export class AccountPage {
   editAccountInfoHead: Locator;
 
   spmPrompt: Locator;
-  nsHead: Locator;
-  switchSignUpButton: Locator;
+
   productNameColumnheader: Locator;
   skuColumnheader: Locator;
   priceColumnheader: Locator;
@@ -78,12 +77,7 @@ export class AccountPage {
     });
 
     this.spmPrompt = page.getByText("As part of our continuing");
-    this.nsHead = page.getByRole("heading", {
-      name: "Newsletter Subscription",
-    });
-    this.switchSignUpButton = page.getByRole("switch", {
-      name: "Sign Up to receive our",
-    });
+
     this.productNameColumnheader = page.getByRole("columnheader", {
       name: "Product Name",
     });

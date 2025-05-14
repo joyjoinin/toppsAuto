@@ -1,18 +1,6 @@
 import { AccountPage } from "../../pages/accountPage";
 
 export default class AccountSteps extends AccountPage {
-  async edit() {
-    await this.editButton.click();
-  }
-  async inputFirstName(firstName: string) {
-    await this.firstName.clear();
-    await this.firstName.fill(firstName);
-  }
-  async inputLastName(lastName: string) {
-    await this.lastName.clear();
-    await this.lastName.fill(lastName);
-  }
-
   async myAccountPage() {
     await this.myAccount.click();
   }
@@ -29,20 +17,20 @@ export default class AccountSteps extends AccountPage {
     await this.redemptions.click();
   }
 
-  async pdsPage() {
-    await this.PDS.click();
+  async productDefectSubmissionPage() {
+    await this.productDefectSubmission.click();
   }
 
   async accountInformationPage() {
     await this.accountInfo.click();
   }
 
-  async bblPage() {
-    await this.BBL.click();
+  async becomeBigLeaguerPage() {
+    await this.becomeBigLeaguer.click();
   }
 
-  async sfbPage() {
-    await this.SFB.click();
+  async socialFollowBackPage() {
+    await this.socialFollowBack.click();
   }
 
   async privacySettingsPage() {
@@ -53,30 +41,11 @@ export default class AccountSteps extends AccountPage {
     await this.storeCredit.click();
   }
 
-  async spmPage() {
-    await this.SPM.click();
-  }
-
   async rewardsPage() {
     await this.rewards.click();
   }
 
-  async nsPage() {
-    await this.NS.click();
-  }
-
-  async getFirstName() {
-    const name = await this.firstName.inputValue();
-
-    return name;
-  }
-
-  async getLastName() {
-    const name = await this.lastName.inputValue();
-    return name;
-  }
-
-  async save() {
-    await this.saveButton.click();
+  async newsletterSubscriptionsPage() {
+    await this.newsletterSubscriptions.click();
   }
 }

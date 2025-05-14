@@ -25,7 +25,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ["junit", { outputFile: "results.xml" }],
+    // ["junit", { outputFile: "results.xml" }],
     ["html", { outputFolder: "playwright-report" }],
   ] /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */,
   timeout: 3 * 60 * 60 * 1000,
@@ -36,7 +36,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
-    video: { mode: "retain-on-failure", size: { width: 1920, height: 1280 } },
+    video: { mode: "retain-on-failure", size: { width: 1720, height: 1080 } },
     // video: { mode: "retain-on-failure" },
     screenshot: "on",
     actionTimeout: 20 * 1000,
@@ -50,14 +50,14 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         // channel: "chrome",
-        viewport: { width: 1920, height: 1280 },
+        viewport: { width: 1720, height: 1080 },
         extraHTTPHeaders: {
           "x-next-authorization": process.env.Authorization || "",
           "x-next-datasource": process.env.shopify || "",
         },
         storageState: ".auth/user.json",
-        // headless: true,
-        headless: false,
+        headless: true,
+        // headless: false,
         launchOptions: {
           args: [
             // "--disable-web-security",

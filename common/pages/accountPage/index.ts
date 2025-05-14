@@ -6,37 +6,14 @@ export class AccountPage {
   myOrders: Locator;
   addressBook: Locator;
   redemptions: Locator;
-  PDS: Locator;
+  productDefectSubmission: Locator;
   accountInfo: Locator;
-  BBL: Locator;
-  SFB: Locator;
+  becomeBigLeaguer: Locator;
+  socialFollowBack: Locator;
   privacySettings: Locator;
   storeCredit: Locator;
-  SPM: Locator;
   rewards: Locator;
-  NS: Locator;
-
-  editButton: Locator;
-  firstName: Locator;
-  lastName: Locator;
-  saveButton: Locator;
-  myAccountHead: Locator;
-  accountInformationHead: Locator;
-  addressBookHead: Locator;
-  addAddressButton: Locator;
-  editAccountInfoHead: Locator;
-
-  spmPrompt: Locator;
-
-  productNameColumnheader: Locator;
-  skuColumnheader: Locator;
-  priceColumnheader: Locator;
-  qtyColumnheader: Locator;
-  subtotalColumnheader: Locator;
-  orderInformationHeading: Locator;
-  shippingAddressLabel: Locator;
-  billingAddressLabel: Locator;
-  paymentMethodLabel: Locator;
+  newsletterSubscriptions: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -51,47 +28,21 @@ export class AccountPage {
       name: "Redemptions",
       exact: true,
     });
-    this.PDS = page.getByRole("link", { name: "Product Defect Submission" });
+    this.productDefectSubmission = page.getByRole("link", {
+      name: "Product Defect Submission",
+    });
     this.accountInfo = page.getByRole("link", { name: "Account Information" });
-    this.BBL = page.getByRole("link", { name: "Become Big Leaguer" });
-    this.SFB = page.getByRole("link", { name: "Social Follow Back" });
+    this.becomeBigLeaguer = page.getByRole("link", {
+      name: "Become Big Leaguer",
+    });
+    this.socialFollowBack = page.getByRole("link", {
+      name: "Social Follow Back",
+    });
     this.privacySettings = page.getByRole("link", { name: "Privacy Settings" });
     this.storeCredit = page.getByRole("link", { name: "Store Credit" });
-    this.SPM = page.getByRole("link", { name: "Stored Payment Methods" });
     this.rewards = page.locator("#main").getByRole("link", { name: "Rewards" });
-    this.NS = page.getByRole("link", { name: "Newsletter Subscriptions" });
-
-    this.editButton = page.getByRole("button", { name: "Edit" });
-    this.firstName = page.getByPlaceholder("First name");
-    this.lastName = page.getByPlaceholder("Last name");
-    this.saveButton = page.getByRole("button", { name: "Save" });
-    this.myAccountHead = page.getByRole("heading", { name: "My Account" });
-    this.accountInformationHead = page.getByRole("heading", {
-      name: "Account Information",
+    this.newsletterSubscriptions = page.getByRole("link", {
+      name: "Newsletter Subscriptions",
     });
-    this.addressBookHead = page.getByRole("heading", { name: "Address Book" });
-    this.addAddressButton = page.getByRole("link", { name: "Add address" });
-
-    this.editAccountInfoHead = page.getByRole("heading", {
-      name: "Edit Account Information",
-    });
-
-    this.spmPrompt = page.getByText("As part of our continuing");
-
-    this.productNameColumnheader = page.getByRole("columnheader", {
-      name: "Product Name",
-    });
-    this.skuColumnheader = page.getByRole("columnheader", { name: "SKU" });
-    this.priceColumnheader = page.getByRole("columnheader", { name: "Price" });
-    this.qtyColumnheader = page.getByRole("columnheader", { name: "Qty" });
-    this.subtotalColumnheader = page.getByRole("columnheader", {
-      name: "Subtotal",
-    });
-    this.orderInformationHeading = page.getByRole("heading", {
-      name: "Order Information",
-    });
-    this.shippingAddressLabel = page.getByText("Shipping Address");
-    this.billingAddressLabel = page.getByText("Billing Address");
-    this.paymentMethodLabel = page.getByText("Payment Method");
   }
 }

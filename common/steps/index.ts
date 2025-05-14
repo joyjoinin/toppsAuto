@@ -15,6 +15,7 @@ import NewsletterSubscriptionsSteps from "./accountPage/newsletterSubscriptionsP
 import BecomeBigLeaguerSteps from "./accountPage/BecomeBigLeaguerPage";
 import ProductDefectSubmissionSteps from "./accountPage/productDefectSubmissionPage";
 import SocialFollowBackSteps from "./accountPage/socialFollowBackPage";
+import MyAccountSteps from "./accountPage/myAccountPage";
 
 export default class UserSteps {
   page: Page;
@@ -24,6 +25,7 @@ export default class UserSteps {
   cart: CartSteps;
   payment: PaymentSteps;
   myOrders: MyOrdersSteps;
+  myAccount: MyAccountSteps;
   productDefectSubmission: ProductDefectSubmissionSteps;
   addressBook: AddressBookSteps;
   redemptions: RedemptionsSteps;
@@ -42,6 +44,7 @@ export default class UserSteps {
     this.cart = new CartSteps(page);
     this.payment = new PaymentSteps(page);
     this.myOrders = new MyOrdersSteps(page);
+    this.myAccount = new MyAccountSteps(page);
     this.productDefectSubmission = new ProductDefectSubmissionSteps(page);
     this.addressBook = new AddressBookSteps(page);
     this.redemptions = new RedemptionsSteps(page);

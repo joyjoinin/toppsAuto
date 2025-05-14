@@ -6,7 +6,7 @@ test("check newsletter subscriptions page", async ({ page }) => {
   await Page.home.goHome();
   await Page.redirectToNewslettersSubscriptionsPage();
   await Page.assertElementsExist([
-    Page.newslettersSubscriptions.nsHead,
+    Page.newslettersSubscriptions.newsletterSubscriptionsPageHead,
     Page.newslettersSubscriptions.switchSignUpButton,
   ]);
   await Page.newslettersSubscriptions.switchSignUp();

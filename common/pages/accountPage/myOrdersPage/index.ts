@@ -3,7 +3,6 @@ import { type Locator, type Page } from "@playwright/test";
 export class MyOrdersPage {
   page: Page;
   myOrdersHead: Locator;
-
   productNameColumnheader: Locator;
   skuColumnheader: Locator;
   priceColumnheader: Locator;

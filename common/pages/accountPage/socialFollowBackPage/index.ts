@@ -1,8 +1,8 @@
 import { type Locator, type Page } from "@playwright/test";
 
-export class SfbPage {
+export class SocialFollowBackPage {
   page: Page;
-  smfbHead: Locator;
+  socialFollowBackHead: Locator;
   enterMoreCodesButton: Locator;
   codeTab: Locator;
   firstNameTab: Locator;
@@ -13,7 +13,7 @@ export class SfbPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.smfbHead = page.getByRole("heading", {
+    this.socialFollowBackHead = page.getByRole("heading", {
       name: "Social Media Follow Back",
     });
     this.enterMoreCodesButton = page.getByRole("link", {

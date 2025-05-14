@@ -1,8 +1,8 @@
 import { type Locator, type Page } from "@playwright/test";
 
-export class BblPage {
+export class BecomeBigLeaguerPage {
   page: Page;
-  bblHead: Locator;
+  becomeBigLeaguerHead: Locator;
   enterMoreCodesButton: Locator;
   codeTab: Locator;
   firstNameTab: Locator;
@@ -12,7 +12,9 @@ export class BblPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.bblHead = page.getByRole("heading", { name: "Become A Big Leaguer" });
+    this.becomeBigLeaguerHead = page.getByRole("heading", {
+      name: "Become A Big Leaguer",
+    });
     this.enterMoreCodesButton = page.getByRole("link", {
       name: "Enter More Codes",
     });

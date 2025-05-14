@@ -1,20 +1,20 @@
-import { Browser, Page, expect, Locator } from "@playwright/test";
+import { Page, expect, Locator } from "@playwright/test";
 import HomeSteps from "./homePage";
 import AccountSteps from "./accountPage";
 import CollectionsSteps from "./collectionsPage";
 import CartSteps from "./cartPage";
 import PaymentSteps from "./paymentPage";
 import MyOrdersSteps from "./accountPage/myOrdersPage";
-import PdsSteps from "./accountPage/pdsPage";
 import AddressBookSteps from "./accountPage/addressBookPage";
 import RedemptionsSteps from "./accountPage/redemptionsPage";
-import BblSteps from "./accountPage/bblPage";
-import FsbSteps from "./accountPage/sfbPage";
 import PrivacySettingsSteps from "./accountPage/privacySettingsPage";
 import { PageUrls } from "@/params/params";
 import StoreCreditSteps from "./accountPage/storeCreditPage";
 import RewardsSteps from "./accountPage/rewardsPage";
 import NewsletterSubscriptionsSteps from "./accountPage/newsletterSubscriptionsPage";
+import BecomeBigLeaguerSteps from "./accountPage/BecomeBigLeaguerPage";
+import ProductDefectSubmissionSteps from "./accountPage/productDefectSubmissionPage";
+import SocialFollowBackSteps from "./accountPage/socialFollowBackPage";
 
 export default class UserSteps {
   page: Page;
@@ -24,11 +24,11 @@ export default class UserSteps {
   cart: CartSteps;
   payment: PaymentSteps;
   myOrders: MyOrdersSteps;
-  pds: PdsSteps;
+  productDefectSubmission: ProductDefectSubmissionSteps;
   addressBook: AddressBookSteps;
   redemptions: RedemptionsSteps;
-  bbl: BblSteps;
-  fsb: FsbSteps;
+  becomeBigLeaguer: BecomeBigLeaguerSteps;
+  socialFollowBack: SocialFollowBackSteps;
   privateSettings: PrivacySettingsSteps;
   storeCredit: StoreCreditSteps;
   rewards: RewardsSteps;
@@ -42,11 +42,11 @@ export default class UserSteps {
     this.cart = new CartSteps(page);
     this.payment = new PaymentSteps(page);
     this.myOrders = new MyOrdersSteps(page);
-    this.pds = new PdsSteps(page);
+    this.productDefectSubmission = new ProductDefectSubmissionSteps(page);
     this.addressBook = new AddressBookSteps(page);
     this.redemptions = new RedemptionsSteps(page);
-    this.bbl = new BblSteps(page);
-    this.fsb = new FsbSteps(page);
+    this.becomeBigLeaguer = new BecomeBigLeaguerSteps(page);
+    this.socialFollowBack = new SocialFollowBackSteps(page);
     this.privateSettings = new PrivacySettingsSteps(page);
     this.storeCredit = new StoreCreditSteps(page);
     this.rewards = new RewardsSteps(page);
@@ -85,8 +85,8 @@ export default class UserSteps {
     await this.page.goto(PageUrls.orders);
   }
 
-  async redirectToPDSPage() {
-    await this.page.goto(PageUrls.pds);
+  async redirectToProductDefectSubmissionPage() {
+    await this.page.goto(PageUrls.productDefectSubmission);
   }
 
   async redirectToAddressPage() {
@@ -96,11 +96,11 @@ export default class UserSteps {
   async redirectToRedemptionsPage() {
     await this.page.goto(PageUrls.redemptions);
   }
-  async redirectToBblPage() {
-    await this.page.goto(PageUrls.bbl);
+  async redirectToBecomeBigLeaguerPage() {
+    await this.page.goto(PageUrls.becomeBigLeaguer);
   }
-  async redirectToSfbPage() {
-    await this.page.goto(PageUrls.sfb);
+  async redirectToSocialMediaFollowBackPage() {
+    await this.page.goto(PageUrls.socialMediaFollowBack);
   }
 
   async redirectToPrivacySettingsPage() {

@@ -1,4 +1,3 @@
-import { NewsletterSubscriptionsPage } from "@/pages/accountPage/newsletterSubscriptionsPage";
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config({ path: path.resolve(__dirname, ".env") });
@@ -12,11 +11,11 @@ export const TEST_COLLECTION = `${BASE_URL}/collections/joy-automation`;
 export const CustomerPaths = {
   account: "/customer/account",
   orders: "/customer/account/orders",
-  pds: "/customer/serviceclaim/listing",
+  productDefectSubmission: "/customer/serviceclaim/listing",
   address: "/customer/address",
   redemptions: "/customer/redemptions",
-  bbl: "/customer/sweepstakes/listing",
-  sfb: "/customer/bigleaguebaseball/listing",
+  becomeBigLeaguer: "/customer/sweepstakes/listing",
+  socialMediaFollowBack: "/customer/bigleaguebaseball/listing",
   settings: "/customer/account/settings",
   credit: "/customer/account/store-credit",
   rewards: "/customer/loyalty/program",
@@ -27,11 +26,11 @@ export const PageUrls = {
   testCollection: TEST_COLLECTION,
   account: `${BASE_URL}${CustomerPaths.account}`,
   orders: `${BASE_URL}${CustomerPaths.orders}`,
-  pds: `${BASE_URL}${CustomerPaths.pds}`,
+  productDefectSubmission: `${BASE_URL}${CustomerPaths.productDefectSubmission}`,
   address: `${BASE_URL}${CustomerPaths.address}`,
   redemptions: `${BASE_URL}${CustomerPaths.redemptions}`,
-  bbl: `${BASE_URL}${CustomerPaths.bbl}`,
-  sfb: `${BASE_URL}${CustomerPaths.sfb}`,
+  becomeBigLeaguer: `${BASE_URL}${CustomerPaths.becomeBigLeaguer}`,
+  socialMediaFollowBack: `${BASE_URL}${CustomerPaths.socialMediaFollowBack}`,
   privateSettings: `${BASE_URL}${CustomerPaths.settings}`,
   storeCredit: `${BASE_URL}${CustomerPaths.credit}`,
   rewards: `${BASE_URL}${CustomerPaths.rewards}`,

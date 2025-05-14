@@ -1,8 +1,8 @@
 import { type Locator, type Page } from "@playwright/test";
 
-export class PdsPage {
+export class ProductDefectSubmissionPage {
   page: Page;
-  pdsHead: Locator;
+  productDefectSubmissionHead: Locator;
   addSubmissionButton: Locator;
   submissionType: Locator;
   year: Locator;
@@ -15,7 +15,7 @@ export class PdsPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.pdsHead = page.getByRole("heading", {
+    this.productDefectSubmissionHead = page.getByRole("heading", {
       name: "Product Defect Submission",
     });
     this.addSubmissionButton = page.getByRole("link", {

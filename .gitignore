@@ -8,3 +8,5 @@ node_modules/
 /.auth/
 /.env
 results
+.DS_Store
+/tests/.DS_Store

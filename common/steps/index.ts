@@ -12,7 +12,7 @@ import { PageUrls } from "@/params/params";
 import StoreCreditSteps from "./accountPage/storeCreditPage";
 import RewardsSteps from "./accountPage/rewardsPage";
 import NewsletterSubscriptionsSteps from "./accountPage/newsletterSubscriptionsPage";
-import BecomeBigLeaguerSteps from "./accountPage/BecomeBigLeaguerPage";
+import BecomeBigLeaguerSteps from "./accountPage/becomeBigLeaguerPage";
 import ProductDefectSubmissionSteps from "./accountPage/productDefectSubmissionPage";
 import SocialFollowBackSteps from "./accountPage/socialFollowBackPage";
 import MyAccountSteps from "./accountPage/myAccountPage";

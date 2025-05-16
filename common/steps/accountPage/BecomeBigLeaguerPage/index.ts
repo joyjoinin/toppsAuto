@@ -1,4 +1,4 @@
-import { BecomeBigLeaguerPage } from "@/pages/accountPage/BecomeBigLeaguerPage";
+import { BecomeBigLeaguerPage } from "@/pages/accountPage/becomeBigLeaguerPage";
 
 export default class BecomeBigLeaguerSteps extends BecomeBigLeaguerPage {
   async enterMoreCodes() {

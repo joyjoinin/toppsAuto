@@ -9,6 +9,12 @@ export class BecomeBigLeaguerPage {
   lastNameTab: Locator;
   isOverAgeTab: Locator;
   submittedAtTab: Locator;
+  howToEnterHead: Locator;
+  firstName: Locator;
+  lastName: Locator;
+  code: Locator;
+  check18box: Locator;
+  submitButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -23,5 +29,23 @@ export class BecomeBigLeaguerPage {
     this.lastNameTab = page.getByRole("cell", { name: "Last name" });
     this.isOverAgeTab = page.getByRole("cell", { name: "Is Over Age" });
     this.submittedAtTab = page.getByRole("cell", { name: "Submitted At" });
+    this.howToEnterHead = page.getByRole("heading", { name: "How to Enter" });
+    this.firstName = page
+      .locator("div")
+      .filter({ hasText: /^First name$/ })
+      .nth(1);
+    this.lastName = page
+      .locator("div")
+      .filter({ hasText: /^Last name$/ })
+      .nth(1);
+    this.code = page
+      .locator("div")
+      .filter({ hasText: /^Code$/ })
+      .nth(1);
+    this.check18box = page
+      .locator("div")
+      .filter({ hasText: /^Code$/ })
+      .nth(1);
+    this.submitButton = page.getByRole("button", { name: "Submit" });
   }
 }

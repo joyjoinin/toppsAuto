@@ -10,7 +10,7 @@ export default class RedemptionsSteps extends RedemptionsPage {
   }
 
   async myShippedRedemptions() {
-    await this.myOpenRedemptionsTab.click();
+    await this.myShippedRedemptionsTab.click();
   }
 
   async enterCode(code: string) {

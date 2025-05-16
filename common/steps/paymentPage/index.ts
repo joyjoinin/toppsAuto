@@ -46,5 +46,6 @@ export default class PaymentSteps extends PaymentPage {
   async applyDiscount(code: string) {
     await this.discount.fill(code);
     await this.apply.click();
+    await expect(this.apply).toBeInViewport();
   }
 }

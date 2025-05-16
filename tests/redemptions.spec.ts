@@ -13,4 +13,19 @@ test("check redemptions page", async ({ page }) => {
     Page.redemptions.codeArea,
     Page.redemptions.submitButton,
   ]);
+  await Page.redemptions.myOpenRedemptions();
+  await Page.assertElementsExist([
+    Page.redemptions.redeemACodeCell,
+    Page.redemptions.productCell,
+    Page.redemptions.descriptionCell,
+    Page.redemptions.statusCell,
+  ]);
+  await Page.redemptions.myShippedRedemptions();
+  await Page.assertElementsExist([
+    Page.redemptions.redeemACodeCell,
+    Page.redemptions.productCell,
+    Page.redemptions.descriptionCell,
+    Page.redemptions.shippedDateCell,
+    Page.redemptions.trackingNumberCell,
+  ]);
 });

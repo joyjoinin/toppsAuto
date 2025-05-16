@@ -118,6 +118,9 @@ test("Buy now , add shipping free ", async ({ page }) => {
       .getByRole("row", { name: "Shipping" })
       .getByRole("cell", { name: "FREE" })
   );
+  await Page.assertElementExist(
+    page.getByRole("row", { name: "Estimated taxes" })
+  );
   await Page.payment.payNow();
   await Page.payment.assertPaymentSuccess();
 });

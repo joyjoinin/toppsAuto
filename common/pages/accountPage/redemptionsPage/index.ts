@@ -10,6 +10,13 @@ export class RedemptionsPage {
   myShippedRedemptionsTab: Locator;
   submitButton: Locator;
   codeArea: Locator;
+  myOpenRedemptionsCell: Locator;
+  productCell: Locator;
+  descriptionCell: Locator;
+  statusCell: Locator;
+  redeemACodeCell: Locator;
+  shippedDateCell: Locator;
+  trackingNumberCell: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -27,5 +34,16 @@ export class RedemptionsPage {
     });
     this.submitButton = page.getByRole("button", { name: "Submit" });
     this.codeArea = page.getByPlaceholder("Redeem Code");
+    this.myOpenRedemptionsCell = page.getByRole("cell", {
+      name: "Redemption Code",
+    });
+    this.productCell = page.getByRole("cell", { name: "Product" });
+    this.descriptionCell = page.getByRole("cell", { name: "Description" });
+    this.statusCell = page.getByRole("cell", { name: "Status" });
+    this.redeemACodeCell = page.getByRole("cell", { name: "Redemption Code" });
+    this.shippedDateCell = page.getByRole("cell", { name: "Shipped Date" });
+    this.trackingNumberCell = page.getByRole("cell", {
+      name: "Tracking Number",
+    });
   }
 }
